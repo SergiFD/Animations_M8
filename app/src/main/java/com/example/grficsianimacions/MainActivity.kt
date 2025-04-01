@@ -1,5 +1,6 @@
 package com.example.grficsianimacions
 
+import ColorView
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -12,6 +13,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var btWheels: Button
     private lateinit var btMecanico: Button
     private lateinit var btCarrera: Button
+    private lateinit var btColor: Button
     private lateinit var tv_animation: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,6 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         btWheels = findViewById(R.id.bt_weels)
         btMecanico = findViewById(R.id.bt_Mecanico)
+        btColor = findViewById(R.id.bt_Color)
         btCarrera = findViewById(R.id.bt_Carrera)
         tv_animation = findViewById(R.id.tv_animation)
 
@@ -47,6 +50,11 @@ class MainActivity : AppCompatActivity() {
 
         btMecanico.setOnClickListener {
             val intent = Intent(this, MecanicoView::class.java)
+            startActivity(intent)
+        }
+
+        btColor.setOnClickListener {
+            val intent = Intent(this, ColorView::class.java)
             startActivity(intent)
         }
     }

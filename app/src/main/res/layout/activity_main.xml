@@ -43,27 +43,27 @@
 
             <Button
                 android:id="@+id/bt_weels"
-                android:layout_width="wrap_content"
+                android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:text="poner ruedas" />
 
             <Button
                 android:id="@+id/bt_Mecanico"
-                android:layout_width="wrap_content"
+                android:layout_width="109dp"
                 android:layout_height="wrap_content"
                 android:text="Radiador Spring" />
 
             <Button
                 android:id="@+id/bt_Carrera"
-                android:layout_width="wrap_content"
+                android:layout_width="79dp"
                 android:layout_height="wrap_content"
                 android:text="Carrera" />
 
             <Button
-                android:id="@+id/bt_Salir"
+                android:id="@+id/bt_Color"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Salir" />
+                android:text="Color" />
 
         </LinearLayout>
 
