@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         tv_animation.startAnimation(fadeInAnimation)
 
         btWheels.setOnClickListener {
-            val intent = Intent(this, Rayo_wheels::class.java)
+            val intent = Intent(this, WheelsView::class.java)
             startActivity(intent)
         }
 

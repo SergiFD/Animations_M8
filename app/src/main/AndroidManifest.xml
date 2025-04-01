@@ -24,7 +24,7 @@
         </activity>
 
         <activity
-            android:name=".Rayo_wheels"
+            android:name=".WheelsView"
             android:exported="true">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />

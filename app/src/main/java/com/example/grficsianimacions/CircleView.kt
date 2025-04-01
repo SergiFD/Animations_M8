@@ -67,9 +67,9 @@ class CircleView(context: Context, attrs: AttributeSet?) : View(context, attrs) 
 
                 // Agrega las posiciones fijas de las ruedas
                 val ruedaIzquierdaX = rayoX + rayoWidth * 0.20f
-                val ruedaDerechaX = rayoX + rayoWidth * 0.72f
+                val ruedaDerechaX = rayoX + rayoWidth * 0.74f
                 fixedPositions.add(Pair(ruedaIzquierdaX, rayoY + rayoHeight * 0.89f))
-                fixedPositions.add(Pair(ruedaDerechaX, rayoY + rayoHeight * 0.89f))
+                fixedPositions.add(Pair(ruedaDerechaX, rayoY + rayoHeight * 0.86f))
             }
         }
     }

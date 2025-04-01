@@ -5,7 +5,7 @@ import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.yourapp.CircleView
 
-class Rayo_wheels : AppCompatActivity(){
+class WheelsView : AppCompatActivity(){
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
             setContentView(R.layout.activity_wheels)

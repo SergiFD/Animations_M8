@@ -51,7 +51,7 @@
                 android:id="@+id/bt_Mecanico"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mecanico" />
+                android:text="Radiador Spring" />
 
             <Button
                 android:id="@+id/bt_Carrera"

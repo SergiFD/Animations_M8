@@ -64,6 +64,13 @@
         app:layout_constraintStart_toStartOf="@+id/iw_rayo"
         app:layout_constraintEnd_toEndOf="@+id/iw_rayo"/>
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/wheels"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="245dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

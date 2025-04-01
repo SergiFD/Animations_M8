@@ -4,10 +4,13 @@ import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import android.animation.TimeInterpolator
 import android.animation.ValueAnimator
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.animation.LinearInterpolator
 import android.widget.Button
 import android.widget.ImageView
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 
@@ -17,8 +20,7 @@ class RacingView : AppCompatActivity() {
     private lateinit var wheelSet: AnimatorSet
     private lateinit var speedButton: Button
     private var currentSpeed: Long = 3000 // Velocidad inicial en milisegundos (3 segundos)
-    private val minSpeed: Long = 1000 // Velocidad mínima (1 segundo)
-    private val maxSpeed: Long = 200 // Velocidad máxima (0.5 segundos)
+    private val minSpeed: Long = 800 // Velocidad mínima (1 segundo)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -69,7 +71,24 @@ class RacingView : AppCompatActivity() {
             // Si la velocidad alcanza el límite mínimo, el botón puede deshabilitarse
             if (currentSpeed == minSpeed) {
                 speedButton.isEnabled = false // Deshabilitar el botón cuando se alcanza la velocidad máxima
+                showAlertDialogWin(this)
             }
         }
+
+
+    }
+
+    fun showAlertDialogWin(context: Context) {
+        val builder = AlertDialog.Builder(context)
+        builder.setTitle("Has ganado la carrera!")
+        builder.setMessage("Has ganado la carrera contra Cruz Ramirez! Has ganado una copa Pistón.")
+        builder.setPositiveButton("Aceptar") { dialog, _ ->
+            dialog.dismiss()
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+        val dialog = builder.create()
+        dialog.setCancelable(false)
+        dialog.show()
     }
 }
